@@ -76,4 +76,40 @@ prints:
     0
     Lift Off!
 
+Collections:
+------------
 
+Dictionaries:
+
+    var locations = Dictionary.new();
+
+Adding stuff:
+
+    var locations = Dictionary.new();
+    locations.at('34 High Street').put('Bob');
+    locations.at('The Old Church').put('Theodore');
+
+Iterating through the contents:
+
+    var locations = Dictionary.new();
+    locations.at('34 High Street').put('Bob');
+    locations.at('The Old Church').put('Theodore');
+    locations.do(function(key, value) {
+        console.log(value + ' is at ' + key);
+    });
+
+prints:
+
+    Bob is at 34 High Street
+    Theodore is at The Old Church
+
+Other Dictionary methods:
+
+    myDictionary.size();
+    myDictionary.includesKey('blah'); // returns true or false
+    myDictionary.removeKey('blah');   
+
+Set:
+----
+
+Coming soon...
