@@ -1,5 +1,8 @@
 Object.prototype.subclass = function(mixin) {
 	var obj = new SmallJsBaseObject();
+	for (var p in this) {
+		obj[p] = this[p];
+	}
 	for (var p in mixin) {
 		obj[p] = mixin[p];
 	}
@@ -11,7 +14,9 @@ SmallJsBaseObject = function() {
 		for (var p in params) {
 			this[p] = params[p];
 		}
-		this.initialize(params);
+		if (this.initialize instanceof Function) {
+			this.initialize(params);
+		}
 		return this;
 	};
 };
