@@ -1,7 +1,7 @@
 smalljs
 =======
 
-Smalltalk-like class semantics, collections and loops for JavaScript
+Smalltalk-like class semantics, collections and loops for JavaScript. Just for fun :).
 
 Classes:
 --------
